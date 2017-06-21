@@ -1,0 +1,17 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, Serif;
+  font-size: 16pt;
+}
+
+img {
+  border: 0;
+}
+
+pre code {
+  border: 1px solid black;
+  font-family: monospace;
+}
