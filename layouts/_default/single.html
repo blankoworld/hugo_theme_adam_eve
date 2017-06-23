@@ -6,20 +6,11 @@
 </head>
 
 <body>
-  <nav>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL | absLangURL}}">{{ .Pre}} {{ .Name }}</a>
-    {{ end }}
-    {{ if .Site.Menus.main }}
-    <hr />
-    {{ end }}
-  </nav>
+  {{ if .Site.Menus.main }}
+    {{ partial "menu.html" . }}
+  {{ end }}
   <aside>
-    <div id="toc" class="well col-md-4 col-sm-6">
-      <h1>{{ i18n "toc" }}</h1>
-      {{ .TableOfContents }}
-    </div>
+    {{ partial "toc.html" . }}
     <hr />
   </aside>
   <main>

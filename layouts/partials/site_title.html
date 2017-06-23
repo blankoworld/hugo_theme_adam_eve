@@ -1,0 +1,4 @@
+<h1 id="site_title">{{ .Site.Title }}</h1>
+{{ if isset .Site.Params "description" }}
+  <p>{{ .Site.Params.description }}</p>
+{{ end }}
