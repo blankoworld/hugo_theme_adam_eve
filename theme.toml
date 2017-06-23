@@ -3,9 +3,9 @@
 
 name = "Adam & Eve"
 license = "MIT"
-licenselink = "https://github.com/blankoworld/adam_eve_theme/blob/master/LICENSE.md"
+licenselink = "https://github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE.md"
 description = "A simple wiki in its original formal state"
-homepage = "https://github.com/blankoworld/adam_eve_theme"
+homepage = "https://github.com/blankoworld/hugo_theme_adam_eve"
 tags = ['minimal', 'wiki']
 features = []
 min_version = "0.23"
