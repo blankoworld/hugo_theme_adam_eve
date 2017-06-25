@@ -11,3 +11,8 @@ a.remote {
   text-decoration: none;
   word-wrap: break-word;
 }
+
+a.internal {
+  color: #080;
+  text-decoration: none;
+}
