@@ -12,15 +12,15 @@ After that, you need to dress it with more CSS.
 
 For more information about shortcodes, check [Shortcode section](#shortcodes).
 
-## Behaviour 1 (default): all links are internal one and you will use external shortcode
+## Behaviour 1 (default): all links are internal one and you will use remote shortcode
 
 By default all links are blue (table of contents, menu, etc.). And all links from the content are green (as internal one).
 
-This mean you will probably use 'external' shortcode for external links.
+This mean you will probably use 'remote' shortcode for external links.
 
 Indeed you can use 'internal' shortcode too. But all links from main content is green by default.
 
-## Behaviour 2: all links are normal and you will use internal and external shortcode to define all links
+## Behaviour 2: all links are normal and you will use internal and remote shortcode to define all links
 
 If you want to consider all links as normal, and want to define yourself which link is external, which other one is internal, you need to comment these line in **static/css/main.css**:
 
@@ -56,6 +56,12 @@ Example:
 
 ```
 {{< remote "Wiki" "http://fr.wikipedia.org/wiki/Wiki" >}}
+```
+
+**Optional**: This shortcode accepts a third parameter to define link title. Example: 
+
+```
+{{< remote "Panda" "https://best.panda.domain.tld" "What a panda looks like" >}}
 ```
 
 ## internal
