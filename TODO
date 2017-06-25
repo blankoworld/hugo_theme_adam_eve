@@ -1,0 +1,4 @@
+# TODO list
+
+  * improve remote shortcode to use param 1 as title (if only 1 param given)
+  * relref doesn't work into a note shortcode: check what's possible to do
