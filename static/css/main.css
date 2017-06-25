@@ -25,3 +25,39 @@ a.internal {
   color: #080;
   text-decoration: none;
 }
+
+div.note {
+  margin: 2em;
+  border-radius: 20px;
+  text-align: justify;
+  vertical-align: middle;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70% !important;
+  min-height: 40px;
+  clear: both;
+  padding: 15px 20px 15px 80px;
+  background-position: 20px 50%;
+  background-repeat: no-repeat;
+}
+
+div.warning {
+  background-color: #fdd;
+  background-image: url("/img/warning.png");
+}
+
+div.important {
+  background-color: #ffc;
+  background-image: url("/img/important.png");
+}
+
+div.tip {
+  background-color: #dfd;
+  background-image: url("/img/tip.png");
+}
+
+div.normal {
+  background-color: #eef;
+  background-image: url("/img/note.png");
+}

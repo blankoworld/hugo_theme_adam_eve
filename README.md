@@ -71,3 +71,22 @@ This shortcode will use `relref` Hugo command to create a relative link to the g
 ```
 {{< internal "Magic potion" "section/my_internal_page.md" >}}
 ```
+
+## note
+
+Display a sidebar with a specific background color to show readers something important.
+
+We have 4 sidebar models:
+
+  * warning (red)
+  * important (yellow)
+  * tip (green)
+  * normal (blue)
+
+Example:
+
+```
+{{% note warning %}}
+Pay attention to read this **entire page** before applying what you read!
+{{% /note %}}
+```
