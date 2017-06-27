@@ -90,3 +90,16 @@ Example:
 Pay attention to read this **entire page** before applying what you read!
 {{% /note %}}
 ```
+
+# Screenshots
+
+This is a single page from the wiki, showing:
+
+  * a simple menu to go to the homepage
+  * a table of contents
+  * internal shortcode (the green link)
+  * note shortcode (the 4 models)
+  * nolink shortcode (the red link)
+  * remote shortcode (the link with a globe before)
+
+![A single page from the Wiki](single_page.png)
