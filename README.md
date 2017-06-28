@@ -58,11 +58,19 @@ Example:
 {{< remote "Wiki" "http://fr.wikipedia.org/wiki/Wiki" >}}
 ```
 
-**Optional**: This shortcode accepts a third parameter to define link title. Example: 
+With remote shortcode, you have many other possibilities by playing with parameters:
 
 ```
 {{< remote "Panda" "https://best.panda.domain.tld" "What a panda looks like" >}}
 ```
+
+which add a **title** to your link (when user keep cursor on it).
+
+```
+{{< remote "http://perdu.com/" >}}
+```
+
+which display the link at it is. But with the globe before ;)
 
 ## internal
 
