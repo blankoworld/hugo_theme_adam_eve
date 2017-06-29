@@ -101,6 +101,8 @@ Pay attention to read this **entire page** before applying what you read!
 
 # Screenshots
 
+## Single page
+
 This is a single page from the wiki, showing:
 
   * a simple menu to go to the homepage
@@ -111,3 +113,9 @@ This is a single page from the wiki, showing:
   * remote shortcode (the link with a globe before)
 
 ![A single page from the Wiki](single_page.png)
+
+## Blockquote and code
+
+You can use code syntaxic coloration (with [pygmentize as explained in Hugo documentation](https://gohugo.io/extras/highlighting/)).
+
+![Example of blockquote and code](blockquote_and_code.png)
