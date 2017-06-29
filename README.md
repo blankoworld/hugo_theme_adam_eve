@@ -2,11 +2,26 @@
 
 I migrated my [Dokuwiki](https://www.dokuwiki.org/) to [Hugo](http://gohugo.io/) and created a new theme reconcile both: Adam & Eve was born.
 
-This theme is special: it comes with it more simple formal dress.
+This theme is special: **it comes with its more simple formal dress**.
 
-So I only give some elements so that you can create a Wiki.
+Why ? Because it is:
 
-After that, you need to dress it with more CSS.
+  * simple
+  * clean
+  * responsive
+
+For you to create a Wiki, I created Hugo shortcodes:
+
+  * for external link
+  * for internal link
+  * for word you planned to use to create a new wiki single page
+  * to create different notes:
+    * important note
+    * an alert
+    * tip box
+    * or normal note
+
+After that, if you need to dress it with more CSS, you're free :smile:.
 
 # Link behaviour in content
 
