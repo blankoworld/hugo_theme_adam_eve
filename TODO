@@ -1,6 +1,8 @@
 # TODO list
 
-  * relref doesn't work into a note shortcode: check what's possible to do
+  * relref doesn't work into a note shortcode: check what's possible to do:
+    * explain in README how to use note shortcode to use markdown into (use {{% note normal %}}{{% /note %}} which permit to use markdown AND relref)
   * create a picture of what looks like EACH shortcode and add them into README
   * add a picture to show a wiki website with Adam & Eve theme:
     * show homepage with some links
+  * create a _default/section.html (or something like that) to display EITHER list of page OR {{ .Content }} if a section contains a _index.md file
