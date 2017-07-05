@@ -1,7 +1,7 @@
 {{ if len .Params | eq 2 }}
-<a class="remote" href="{{ .Get 1 }}">{{ .Get 0 }}</a>
+<a class="remote" href="{{ .Get 1 }}" target="_blank">{{ .Get 0 }}</a>
 {{ else if len .Params | eq 3 }}
- <a class="remote" href="{{ .Get 1 }}" title="{{ .Get 2 }}">{{ .Get 0 }}</a>
+ <a class="remote" href="{{ .Get 1 }}" title="{{ .Get 2 }}" target="_blank">{{ .Get 0 }}</a>
 {{ else }}
- <a class="remote" href="{{ .Get 0 }}">{{ .Get 0 }}</a>
+ <a class="remote" href="{{ .Get 0 }}" target="_blank">{{ .Get 0 }}</a>
 {{ end }}
