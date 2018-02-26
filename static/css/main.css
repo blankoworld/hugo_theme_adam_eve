@@ -105,3 +105,10 @@ div.normal {
   background-color: #eef;
   background-image: url("/img/note.png");
 }
+
+@media (min-width: 960px) {
+  html, body {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
