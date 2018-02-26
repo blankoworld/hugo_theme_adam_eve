@@ -1,5 +1,6 @@
 # TODO list
 
+  * documentation (README.md): add explanation for how to install the theme. Cf. https://gohugo.io/getting-started/quick-start/
   * relref doesn't work into a note shortcode: check what's possible to do:
     * explain in README how to use note shortcode to use markdown into (use {{% note normal %}}{{% /note %}} which permit to use markdown AND relref)
   * create a picture of what looks like EACH shortcode and add them into README
