@@ -4,9 +4,17 @@ a:active, a:link, a:visited, a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   text-align: left;
   color: #e52c5a;
+}
+
+h2 {
+  margin-left: 7px;
+}
+
+h3, h4, h5, h6 {
+  margin-left: 15px;
 }
 
 h1#site_title {
@@ -112,6 +120,31 @@ div.normal {
   background-image: url("/img/note.png");
 }
 
+/* CSS counter for chapters/sections */
+body {
+  counter-reset: chapter;
+}
+
+h2:before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
+
+h1 {
+  counter-reset: chapter;
+}
+
+h2 {
+  counter-reset: section;
+}
+
+h3:before {
+  counter-increment: section; 
+  content: counter(chapter) "." counter(section) " ";
+
+}
+
+/* For big displays/screens */
 @media (min-width: 960px) {
   html, body {
     width: 960px;
