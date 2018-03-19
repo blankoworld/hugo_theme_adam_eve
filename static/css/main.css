@@ -123,6 +123,7 @@ div.normal {
 /* CSS counter for chapters/sections */
 body {
   counter-reset: chapter;
+  font-size: 16pt;
 }
 
 h2:before {
