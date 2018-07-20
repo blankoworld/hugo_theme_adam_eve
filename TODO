@@ -7,3 +7,7 @@
   * add a picture to show a wiki website with Adam & Eve theme:
     * show homepage with some links
   * create a _default/section.html (or something like that) to display EITHER list of page OR {{ .Content }} if a section contains a _index.md file
+  * add CSS to permit to print content (as a print.css file) with:
+    * links displayed
+    * font reduced (to print more text on each page)
+    * delete colors (only black & white)
