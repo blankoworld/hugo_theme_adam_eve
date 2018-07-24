@@ -102,22 +102,22 @@ div.note {
 
 div.warning {
   background-color: #fdd;
-  background-image: url("/img/warning.png");
+  background-image: url("{{ "/img/warning.png" | relURL }}");
 }
 
 div.important {
   background-color: #ffc;
-  background-image: url("/img/important.png");
+  background-image: url("{{ "/img/important.png" | relURL }}");
 }
 
 div.tip {
   background-color: #dfd;
-  background-image: url("/img/tip.png");
+  background-image: url("{{ "/img/tip.png" | relURL }}");
 }
 
 div.normal {
   background-color: #eef;
-  background-image: url("/img/note.png");
+  background-image: url("{{ "/img/note.png" | relURL }}");
 }
 
 /* CSS counter for chapters/sections */

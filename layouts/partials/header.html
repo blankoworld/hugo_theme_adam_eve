@@ -2,4 +2,5 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ .Hugo.Generator }}
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
-  <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | relURL }}" title="default">
+  {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" title="default">
