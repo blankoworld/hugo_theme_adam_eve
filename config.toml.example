@@ -1,6 +1,6 @@
-baseURL = "https://domain.tld"
-theme = "adam_eve"
-DefaultContentLanguage = "fr"
+baseURL = "https://example.org"
+theme = "hugo_theme_adam_eve"
+DefaultContentLanguage = "en"
 
 [Languages]
 [Languages.fr]
