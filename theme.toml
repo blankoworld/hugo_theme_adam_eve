@@ -8,7 +8,7 @@ description = "A simple wiki in its original formal state"
 homepage = "https://github.com/blankoworld/hugo_theme_adam_eve"
 tags = ['minimal', 'wiki', 'documentation']
 features = ['wiki', 'responsive', 'minimal', 'shortcode', 'clean', 'boxes']
-min_version = "0.23"
+min_version = "0.43"
 
 [author]
   name = "Olivier DOSSMANN"
