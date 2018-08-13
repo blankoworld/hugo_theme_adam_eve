@@ -114,9 +114,7 @@ Pay attention to read this **entire page** before applying what you read!
 {{% /note %}}
 ```
 
-# Screenshots
-
-## Single page
+# Screenshot
 
 This is a single page from the wiki, showing:
 
@@ -127,10 +125,4 @@ This is a single page from the wiki, showing:
   * nolink shortcode (the red link)
   * remote shortcode (the link with a globe before)
 
-![A single page from the Wiki](single_page.png)
-
-## Blockquote and code
-
-You can use code syntaxic coloration (with [pygmentize as explained in Hugo documentation](https://gohugo.io/extras/highlighting/)).
-
-![Example of blockquote and code](blockquote_and_code.png)
+![A single page from the Wiki](https://raw.githubusercontent.com/blankoworld/hugo_theme_adam_eve/master/images/single_page.png)
