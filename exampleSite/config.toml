@@ -1,0 +1,33 @@
+baseURL = "https://example.org"
+theme = "hugo_theme_adam_eve"
+DefaultContentLanguage = "en"
+
+[Languages]
+[Languages.fr]
+languageCode = "fr"
+title = "À propos d'aquarium"
+
+[Languages.en]
+languageCode = "en"
+title = "About aquarium"
+
+[Languages.fr.params]
+description = "Des poissons et de l'eau"
+
+[Languages.en.params]
+description = "Fish and water"
+
+[[Languages.fr.menu.main]]
+    name = "Accueil"
+    pre = "<span class='homepage'>⌂</span>"
+    weight = -110
+    identifier = "homepage"
+    url = "/"
+
+[[Languages.en.menu.main]]
+    name = "Homepage"
+    pre = "<span class='homepage'>⌂</span>"
+    weight = -110
+    identifier = "homepage"
+    url = "/"
+
