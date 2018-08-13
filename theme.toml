@@ -6,10 +6,11 @@ license = "MIT"
 licenselink = "https://github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE.md"
 description = "A simple wiki in its original formal state"
 homepage = "https://github.com/blankoworld/hugo_theme_adam_eve"
-tags = ['minimal', 'wiki']
-features = []
+tags = ['minimal', 'wiki', 'documentation']
+features = ['wiki', 'responsive', 'minimal', 'shortcode', 'clean', 'boxes']
 min_version = "0.23"
 
 [author]
   name = "Olivier DOSSMANN"
   homepage = "https://olivier.dossmann.net/"
+  repo = "https://github.com/blankoworld/hugo_theme_adam_eve"
