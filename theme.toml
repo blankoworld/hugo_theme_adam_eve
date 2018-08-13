@@ -6,8 +6,8 @@ license = "MIT"
 licenselink = "https://github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE.md"
 description = "A simple wiki in its original formal state"
 homepage = "https://github.com/blankoworld/hugo_theme_adam_eve"
-tags = ['minimal', 'wiki', 'documentation']
-features = ['wiki', 'responsive', 'minimal', 'shortcode', 'clean', 'boxes']
+tags = ['minimal', 'wiki-like', 'documentation']
+features = ['wiki-like', 'responsive', 'minimal', 'shortcode', 'clean', 'boxes', 'i18n']
 min_version = "0.43"
 
 [author]
