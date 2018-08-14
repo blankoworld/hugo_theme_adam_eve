@@ -1,6 +1,6 @@
 # Adam & Eve
 
-I migrated my [Dokuwiki](https://www.dokuwiki.org/) to [Hugo](http://gohugo.io/) and created a new theme reconcile both: Adam & Eve was born.
+I migrated my wiki from [Dokuwiki](https://www.dokuwiki.org/) to [Hugo](http://gohugo.io/) and created a new theme to reconcile both: Adam & Eve was born.
 
 This theme is special: **it comes with its more simple formal dress**.
 
@@ -10,64 +10,66 @@ Why ? Because it is:
   * clean
   * responsive
 
-For you to create a Wiki, I created Hugo shortcodes:
+I was enormously inspired by [Note Plugin](https://www.dokuwiki.org/plugin:note) for notes. And [Dokuwiki](https://www.dokuwiki.org/) for external and internal links.
 
-  * for external link
-  * for internal link
-  * for word you planned to use to create a new wiki single page
-  * to create different notes:
-    * important note
-    * an alert
-    * tip box
-    * or normal note
+## Screenshot
 
-After that, if you need to dress it with more CSS, you're free :smile:.
+This is a single page from the wiki, showing:
 
-# Link behaviour in content
+  * a simple menu to go to the homepage
+  * a table of contents
+  * internal shortcode (the green link)
+  * note shortcode (the 4 models)
+  * nolink shortcode (the red link)
+  * remote shortcode (the link with a globe before)
 
-For more information about shortcodes, check [Shortcode section](#shortcodes).
+![A single page from the Wiki](https://raw.githubusercontent.com/blankoworld/hugo_theme_adam_eve/master/images/single_page.png)
 
-## Behaviour 1 (default): all links are internal one and you will use remote shortcode
+## Installation
 
-By default all links are blue (table of contents, menu, etc.). And all links from the content are green (as internal one).
+In your Hugo root folder, do something like:
 
-This mean you will probably use 'remote' shortcode for external links.
-
-Indeed you can use 'internal' shortcode too. But all links from main content is green by default.
-
-## Behaviour 2: all links are normal and you will use internal and remote shortcode to define all links
-
-If you want to consider all links as normal, and want to define yourself which link is external, which other one is internal, you need to comment these line in **static/css/main.css**:
-
-```
-main a:active, main a:link, main a:visited, main a:hover {
- color: #080; // comment this line if you planned to use 'internal' shortcode
-}
+```bash
+mkdir themes
+cd themes
+git clone https://github.com/blankoworld/hugo_theme_adam_eve.git
 ```
 
-Add **//** at the beginning of each line will be enough.
+Check [Hugo Installation Guide](https://gohugo.io/getting-started/installing/) for more information.
 
-# Shortcodes
+## Getting Started
 
-To use wiki functionnalities, I create some shortcodes.
+### The config file
 
-## nolink
+You can either copy **config.toml.example** from this repository to your Hugo root directory (and rename it **config.toml**). Or copy those included in *exampleSite* directory.
 
-Display a word you want to use later to create a new page of your Wiki.
+Just adapt the content to your needs.
 
-In Dokuwiki it was CamelCase behaviour that show you a word in red.
+### The _index.md files
 
-Example:
+_index.md files are used to display content of a specific category. A category is a directory you add in **content** directory.
+
+Check **exampleSite** directory content for some examples.
+
+**Tip:** If you need to make a link to a category called design, to go to its **_index.md** file, you need to create an empty **index.md** file and make a link like that: 
 
 ```
-{{< nolink "How to create a flower bread" "page/I/want/to/create/later.md" >}}
+[My category]({{< relref "mycategory/index.md" >}})
 ```
 
-## remote
+## Special features
 
-Display a link with a globe before so that readers know they will go away your wiki.
+### Specific links
 
-Example:
+In order to have a similar behaviour to [Dokuwiki](https://www.dokuwiki.org/), I created 3 types of links:
+
+  * Remote link: display a little globe at the left. Permit to reader immediately understand that it's a remote link
+  * Internal link: between page that are in your wiki
+  * Word without link: sometimes you planned to make a link on a word. To not forget, I created a specific **nolink** word to make a specific display
+
+Let's have some example.
+
+For remote links:
 
 ```
 {{< remote "Wiki" "http://fr.wikipedia.org/wiki/Wiki" >}}
@@ -87,15 +89,21 @@ which add a **title** to your link (when user keep cursor on it).
 
 which display the link at it is. But with the globe before ;)
 
-## internal
-
-This shortcode will use `relref` Hugo command to create a relative link to the given page.
+For internal links:
 
 ```
 {{< internal "Magic potion" "section/my_internal_page.md" >}}
 ```
 
-## note
+And for nolink word:
+
+```
+{{< nolink "How to create a flower bread" "page/I/want/to/create/later.md" >}}
+```
+
+**Tip:** Check **exampleSite/content/_index.md** file to have some examples.
+
+### Notes
 
 Display a sidebar with a specific background color to show readers something important.
 
@@ -114,15 +122,10 @@ Pay attention to read this **entire page** before applying what you read!
 {{% /note %}}
 ```
 
-# Screenshot
+## Contributing
 
-This is a single page from the wiki, showing:
+Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/blankoworld/hugo_theme_adam_eve/issues) to let me know. Or make directly a [pull request](//github.com/blankoworld/hugo_theme_adam_eve/pulls).
 
-  * a simple menu to go to the homepage
-  * a table of contents
-  * internal shortcode (the green link)
-  * note shortcode (the 4 models)
-  * nolink shortcode (the red link)
-  * remote shortcode (the link with a globe before)
+## License
 
-![A single page from the Wiki](https://raw.githubusercontent.com/blankoworld/hugo_theme_adam_eve/master/images/single_page.png)
+This theme is released under the MIT License. For more information read the [License](//github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE).
