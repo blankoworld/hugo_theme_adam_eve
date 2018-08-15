@@ -1,14 +1,13 @@
 # TODO list
 
-  * documentation (README.md): add explanation for how to install the theme. Cf. https://gohugo.io/getting-started/quick-start/
   * relref doesn't work into a note shortcode: check what's possible to do:
     * explain in README how to use note shortcode to use markdown into (use {{% note normal %}}{{% /note %}} which permit to use markdown AND relref)
   * create a picture of what looks like EACH shortcode and add them into README
-  * add a picture to show a wiki website with Adam & Eve theme:
-    * show homepage with some links
   * create a _default/section.html (or something like that) to display EITHER list of page OR {{ .Content }} if a section contains a _index.md file
   * add CSS to permit to print content (as a print.css file) with:
     * links displayed
     * font reduced (to print more text on each page)
     * delete colors (only black & white)
   * tests with travis-ci + check all version from 0.43 to 0.46 (and probably more)
+  * add a search bar with a parameter to active it in config.toml + some explanations on README.md file
+  * add a footer with "powered by Adam & Eve theme" + translate it in multiple language
