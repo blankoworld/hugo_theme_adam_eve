@@ -128,4 +128,4 @@ Did you found a bug or got an idea for a new feature? Feel free to use the [issu
 
 ## License
 
-This theme is released under the MIT License. For more information read the [License](//github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE).
+This theme is released under the MIT License. For more information read the [License](//github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE.md).
