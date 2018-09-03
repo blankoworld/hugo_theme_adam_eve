@@ -3,4 +3,4 @@
   {{ .Hugo.Generator }}
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
-  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" title="default">
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink |absURL }}" integrity="{{ $styles.Data.Integrity }}" media="screen" title="default">
