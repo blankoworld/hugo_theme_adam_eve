@@ -6,6 +6,11 @@
 </head>
 
 <body>
+  {{ if isset .Site.Params "nohomebar" }}
+  <!-- No homepage menu bar -->
+  {{ else if .Site.Menus.main }}
+    {{ partial "menu.html" . }}
+  {{ end }}
   <header style="text-align: center;">
     {{ partial "site_title.html" . }}
   <hr />

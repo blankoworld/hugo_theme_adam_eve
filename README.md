@@ -122,6 +122,14 @@ Pay attention to read this **entire page** before applying what you read!
 {{% /note %}}
 ```
 
+### Homepage menu
+
+By default a menu is displayed on Homepage. You can disable it. Use `nohomebar` in **config.toml** like this:
+
+```ini
+[params]                                                                                                                                            nohomebar = true
+```
+
 ## Contributing
 
 Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/blankoworld/hugo_theme_adam_eve/issues) to let me know. Or make directly a [pull request](//github.com/blankoworld/hugo_theme_adam_eve/pulls).
