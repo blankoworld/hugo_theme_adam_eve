@@ -1,4 +1,7 @@
 <nav>
+  {{ if not .Page.IsHome }}
+  <a href="{{ .Site.BaseURL | absLangURL }}"><span class='homepage'>⌂</span>&nbsp;{{ i18n "homepage" }}</a>
+  {{ end }}
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
   <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL | absLangURL}}">{{ .Pre}} {{ .Name }}</a>
