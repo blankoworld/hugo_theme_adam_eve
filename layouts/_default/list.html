@@ -6,9 +6,7 @@
 </head>
 
 <body>
-  {{ if .Site.Menus.main }}
-    {{ partial "menu.html" . }}
-  {{ end }}
+  {{ partial "menu.html" . }}
   <aside>
     {{ partial "toc.html" . }}
     <hr />
