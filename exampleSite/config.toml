@@ -1,6 +1,7 @@
 baseURL = "https://example.org"
 theme = "hugo_theme_adam_eve"
 DefaultContentLanguage = "en"
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 
 [Languages]
 [Languages.fr]

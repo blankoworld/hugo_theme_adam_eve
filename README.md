@@ -127,7 +127,17 @@ Pay attention to read this **entire page** before applying what you read!
 By default a menu is displayed on Homepage. You can disable it. Use `nohomebar` in **config.toml** like this:
 
 ```ini
-[params]                                                                                                                                            nohomebar = true
+[params]
+    nohomebar = true
+```
+
+### Homepage posts list
+
+By default a list of post from `post` directory is shown on Homepage. You can disable it. Use `NoHomepagePostList` in **config.toml** like this:
+
+```ini
+[params]
+    NoHomepagePostList = true
 ```
 
 ## Contributing
