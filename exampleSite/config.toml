@@ -1,6 +1,7 @@
 baseURL = "https://example.org"
 theme = "hugo_theme_adam_eve"
 DefaultContentLanguage = "en"
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 
 [Languages]
 [Languages.fr]
@@ -16,18 +17,3 @@ description = "Des poissons et de l'eau"
 
 [Languages.en.params]
 description = "Fish and water"
-
-[[Languages.fr.menu.main]]
-    name = "Accueil"
-    pre = "<span class='homepage'>⌂</span>"
-    weight = -110
-    identifier = "homepage"
-    url = "/"
-
-[[Languages.en.menu.main]]
-    name = "Homepage"
-    pre = "<span class='homepage'>⌂</span>"
-    weight = -110
-    identifier = "homepage"
-    url = "/"
-

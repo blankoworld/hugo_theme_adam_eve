@@ -18,8 +18,8 @@ Please, don't eat me! I'm a **cute** fish.
 Click on these links to see in what other pages are different.
 {{% /note %}}
 
-  * [Materials]({{< ref "materials.md" >}})
-  * [Styles]({{< ref "styles.md" >}})
+  * [Materials]({{< relref "design/materials.md" >}})
+  * [Styles]({{< relref "design/styles.md" >}})
 
 # Maintenance
 
