@@ -12,6 +12,13 @@ Why ? Because it is:
 
 I was enormously inspired by [Note Plugin](https://www.dokuwiki.org/plugin:note) for notes. And [Dokuwiki](https://www.dokuwiki.org/) for external and internal links.
 
+## Community
+
+They use Adam & Eve:
+
+  * [Weekly Supervised Object Detection in Artworks](https://wsoda.telecom-paristech.fr)
+  * [Recueil d'astuces](https://olivier.dossmann.net/wiki/)
+
 ## Screenshot
 
 This is a single page from the wiki, showing:
