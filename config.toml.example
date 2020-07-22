@@ -19,20 +19,6 @@ description = "Wiki de partage de connaissances"
 [Languages.en.params]
 description = "Sharing knowledge wiki"
 
-[[Languages.fr.menu.main]]
-    name = "Accueil"
-    pre = "<span class='homepage'>⌂</span>"
-    weight = -110
-    identifier = "homepage"
-    url = "/"
-
-[[Languages.en.menu.main]]
-    name = "Homepage"
-    pre = "<span class='homepage'>⌂</span>"
-    weight = -110
-    identifier = "homepage"
-    url = "/"
-
 [markup]
   [markup.tableOfContents]
     endLevel = 6
