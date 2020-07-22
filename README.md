@@ -44,6 +44,24 @@ git clone https://github.com/blankoworld/hugo_theme_adam_eve.git
 
 Check [Hugo Installation Guide](https://gohugo.io/getting-started/installing/) for more information.
 
+## Configuration
+
+It's hardly recommended to check the `config.toml.example` file. Especially to configure the table of content via `[markup]` section, the name of each menu and some other example.
+
+### Table of content
+
+To configure the table of content, edit your `config.toml` file and add something like:
+
+```toml
+[markup]
+  [markup.tableOfContents]
+    endLevel = 6
+    ordered = false
+    startLevel = 1
+```
+
+It means you start the Table of Content from `h1` to `h6`. You can find [more info about table of content configuration on official Hugo documentation](https://gohugo.io/getting-started/configuration-markup/#table-of-contents).
+
 ## Getting Started
 
 ### The config file
