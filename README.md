@@ -62,6 +62,26 @@ To configure the table of content, edit your `config.toml` file and add somethin
 
 It means you start the Table of Content from `h1` to `h6`. You can find [more info about table of content configuration on official Hugo documentation](https://gohugo.io/getting-started/configuration-markup/#table-of-contents).
 
+### Use git commit date as `last modification date`
+
+If you keep an history of your Hugo website, you can use git commit date as last modification date of each page ([as explained in Hugo documentation about EnableGitInfo](https://gohugo.io/getting-started/configuration/#all-configuration-settings)).
+
+To enable this option, edit your `config.toml` file to add:
+
+```toml
+EnableGitInfo = true
+```
+
+This will enable this explained option.
+
+### Choose code colorization theme
+
+Regarding [list of available themes for Chroma plugin](https://xyproto.github.io/splash/docs/), you can customize your preferred code colorization theme using this line in your `config.toml` file:
+
+```toml
+pygmentsstyle = 'monokai'
+```
+
 ## Getting Started
 
 ### The config file
