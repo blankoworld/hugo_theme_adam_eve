@@ -46,7 +46,7 @@ Check [Hugo Installation Guide](https://gohugo.io/getting-started/installing/) f
 
 ## Configuration
 
-It's hardly recommended to check the `config.toml.example` file. Especially to configure the table of content via `[markup]` section, the name of each menu and some other example.
+It's hardly recommended to check the `config.toml.example` file. Especially to configure the table of content via `[markup]` section, the name of each menu, enable Emoji, etc.
 
 ### Table of content
 

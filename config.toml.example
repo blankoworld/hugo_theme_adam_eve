@@ -1,6 +1,8 @@
 baseURL = "https://example.org"
 theme = "hugo_theme_adam_eve"
 DefaultContentLanguage = "en"
+# Enable Emoji, regarding https://www.webfx.com/tools/emoji-cheat-sheet/
+enableEmoji = true
 
 [Languages]
 [Languages.fr]
