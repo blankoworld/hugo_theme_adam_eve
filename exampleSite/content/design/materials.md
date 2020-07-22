@@ -26,3 +26,13 @@ This drawing have been simplified to understand how it works. It may have differ
 {{% /note %}}
 
 ![Aquarium example](/aquarium.png)
+
+
+| Number  | Denomination |
+| ------: | :----------: |
+|  1      | Intake       |
+|  2      | mechanical filtration |
+|  3      | chemical filtration |
+|  4      | biological filtration medium |
+|  5      | outflow to tank |
+

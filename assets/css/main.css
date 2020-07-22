@@ -50,6 +50,21 @@ pre {
   border: thin solid #ccc;
 }
 
+table {
+  margin: 15px auto;
+  width: 100%;
+}
+
+table th {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+table tr:nth-child(odd) {
+  background: #eeeeee;
+}
+
 p img {
   display: block;
   margin: 10px auto;
