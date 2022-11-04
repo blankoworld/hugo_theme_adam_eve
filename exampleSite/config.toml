@@ -5,6 +5,11 @@ DefaultContentLanguage = "en"
 enableEmoji = true
 disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.105.0"
+
 [Languages]
 [Languages.fr]
 languageCode = "fr"

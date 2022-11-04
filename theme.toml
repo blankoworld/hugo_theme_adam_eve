@@ -5,10 +5,15 @@ name = "Adam & Eve"
 license = "MIT"
 licenselink = "https://github.com/blankoworld/hugo_theme_adam_eve/blob/master/LICENSE.md"
 description = "A simple wiki in its original formal state"
+
 homepage = "https://github.com/blankoworld/hugo_theme_adam_eve"
+
+demosite = "https://olivier.dossmann.net/wiki"
+
 tags = ['minimal', 'wiki-like', 'documentation']
 features = ['wiki-like', 'responsive', 'minimal', 'shortcode', 'clean', 'boxes', 'i18n']
-min_version = "0.57"
+
+min_version = "0.105.0"
 
 [author]
   name = "Olivier DOSSMANN"

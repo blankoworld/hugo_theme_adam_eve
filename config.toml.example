@@ -4,6 +4,11 @@ DefaultContentLanguage = "en"
 # Enable Emoji, regarding https://www.webfx.com/tools/emoji-cheat-sheet/
 enableEmoji = true
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.105.0"
+
 [Languages]
 [Languages.fr]
 languageCode = "fr"
