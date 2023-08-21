@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "header.html" . }}
+</head>
+
+<body>
+  {{ partial "menu.html" . }}
+  <aside>
+    {{ partial "toc.html" . }}
+    <hr />
+  </aside>
+  <main>
+    <form action="{{ "search" | absURL }}">
+	    <input type="search" name="q" id="search-query" placeholder="{{ i18n "yourSearch" }}">
+	<button type="submit">{{ i18n "searchButton" }}</button>
+    </form>
+
+    <div id="search-results"></div>
+    <div class="search-loading">{{ i18n "searchLoading" }}</div>
+
+    <script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+        <h3><a href="${link}">${title}</a></h3>
+        <p>${snippet}</p>
+        <p>
+            <small>
+		${ isset tags }{{ i18n "tags" }}: ${tags}<br>${ end }
+            </small>
+        </p>
+    </div>
+    </script>
+
+    <script src="{{ "js/fuse-6.6.2.min.js" | absURL }}" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="{{ "js/mark-8.11.1.min.js" | absURL }}" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+var summaryInclude = 180;
+var fuseOptions = {
+    shouldSort: true,
+    includeMatches: true,
+    includeScore: true,
+    tokenize: true,
+    location: 0,
+    distance: 100,
+    minMatchCharLength: 1,
+    keys: [
+        {name: "title", weight: 0.45},
+        {name: "contents", weight: 0.4},
+        {name: "tags", weight: 0.1},
+        {name: "categories", weight: 0.05}
+    ]
+};
+
+// =============================
+// Search
+// =============================
+
+var inputBox = document.getElementById('search-query');
+if (inputBox !== null) {
+    var searchQuery = param("q");
+    if (searchQuery) {
+        inputBox.value = searchQuery || "";
+        executeSearch(searchQuery, false);
+    } else {
+        document.getElementById('search-results').innerHTML = '<p class="search-results-empty">{{ i18n "searchInstructions" }} <a href="{{ "tags" |absURL }}">{{ i18n "searchAllTags" }}</a>.</p>';
+    }
+}
+
+function executeSearch(searchQuery) {
+
+    show(document.querySelector('.search-loading'));
+
+    fetch('{{ "index.json" |absURL }}').then(function (response) {
+        if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' + response.status);
+            return;
+        }
+        // Examine the text in the response
+        response.json().then(function (pages) {
+            var fuse = new Fuse(pages, fuseOptions);
+            var result = fuse.search(searchQuery);
+            if (result.length > 0) {
+                populateResults(result);
+            } else {
+                document.getElementById('search-results').innerHTML = '<p class=\"search-results-empty\">{{ i18n "searchNoMatch" }}</p>';
+            }
+            hide(document.querySelector('.search-loading'));
+        })
+        .catch(function (err) {
+            console.log('Fetch Error :-S', err);
+        });
+    });
+}
+
+function populateResults(results) {
+
+    var searchQuery = document.getElementById("search-query").value;
+    var searchResults = document.getElementById("search-results");
+
+    // pull template from hugo template definition
+    var templateDefinition = document.getElementById("search-result-template").innerHTML;
+
+    results.forEach(function (value, key) {
+
+        var contents = value.item.contents;
+        var snippet = "";
+        var snippetHighlights = [];
+
+        snippetHighlights.push(searchQuery);
+        snippet = contents.substring(0, summaryInclude * 2) + '&hellip;';
+
+        //replace values
+        var tags = ""
+        if (value.item.tags) {
+            value.item.tags.forEach(function (element) {
+                tags = tags + "<a href='{{ "tags" |absURL }}/" + element + "'>" + "#" + element + "</a> "
+            });
+        }
+
+        var output = render(templateDefinition, {
+            key: key,
+            title: value.item.title,
+            link: value.item.permalink,
+            tags: tags,
+            categories: value.item.categories,
+            snippet: snippet
+        });
+        searchResults.innerHTML += output;
+
+        snippetHighlights.forEach(function (snipvalue, snipkey) {
+            var instance = new Mark(document.getElementById('summary-' + key));
+            instance.mark(snipvalue);
+        });
+
+    });
+}
+
+function render(templateString, data) {
+    var conditionalMatches, conditionalPattern, copy;
+    conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
+    //since loop below depends on re.lastInxdex, we use a copy to capture any manipulations whilst inside the loop
+    copy = templateString;
+    while ((conditionalMatches = conditionalPattern.exec(templateString)) !== null) {
+        if (data[conditionalMatches[1]]) {
+            //valid key, remove conditionals, leave contents.
+            copy = copy.replace(conditionalMatches[0], conditionalMatches[2]);
+        } else {
+            //not valid, remove entire section
+            copy = copy.replace(conditionalMatches[0], '');
+        }
+    }
+    templateString = copy;
+    //now any conditionals removed we can do simple substitution
+    var key, find, re;
+    for (key in data) {
+        find = '\\$\\{\\s*' + key + '\\s*\\}';
+        re = new RegExp(find, 'g');
+        templateString = templateString.replace(re, data[key]);
+    }
+    return templateString;
+}
+
+// Helper Functions
+function show(elem) {
+    elem.style.display = 'block';
+}
+function hide(elem) {
+    elem.style.display = 'none';
+}
+function param(name) {
+    return decodeURIComponent((location.search.split(name + '=')[1] || '').split('&')[0]).replace(/\+/g, ' ');
+}
+    </script>
+  </main>
+  <footer>
+    <hr />
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>
+

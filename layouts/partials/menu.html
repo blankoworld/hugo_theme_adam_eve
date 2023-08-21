@@ -1,6 +1,11 @@
 <nav>
   {{ if not .Page.IsHome }}
-  <a href="{{ .Site.BaseURL | absLangURL }}"><span class='homepage'>⌂</span>&nbsp;{{ i18n "homepage" }}</a>
+  <a href="{{ .Site.BaseURL | absLangURL }}"><span class='homepage'>🏡</span>&nbsp;{{ i18n "homepage" }}</a>
+  {{ end }}
+
+  <!-- If withsearchbar is defined and is true, display Search menu -->
+  {{ if and (isset .Site.Params "withsearchbar") (eq $.Site.Params.withsearchbar true) }}
+  <a href="{{ "search" |absURL }}"><span class='searchmenu'>🔍</span>{{ i18n "searchmenu" }}</a>
   {{ end }}
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}

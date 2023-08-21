@@ -148,6 +148,37 @@ And for nolink word:
 
 **Tip:** Check **exampleSite/content/_index.md** file to have some examples.
 
+### Search bar
+
+There is several steps to add a searchbar on your website.
+
+First edit the **config.toml** file to add `withsearchbar` option:
+
+```ini
+[params]
+    withsearchbar = true
+```
+
+You also need to add `JSON` as output format. Search something like this:
+
+```ini
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+```
+
+Finally create the `content/search.md` file with this content:
+
+```markdown
+---
+title: "Search result"
+sitemap:
+  priority: 0.1
+layout: "search"
+---
+
+Some content you want to add if any JS script was disabled by your subscribers.
+```
+
 ### Notes
 
 Display a sidebar with a specific background color to show readers something important.
