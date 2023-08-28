@@ -30,3 +30,12 @@ other = "parmi les tags"
 
 [searchNoMatch]
 other = "Aucun résultat trouvé"
+
+[pageNotFound]
+other = "Page non trouvée !"
+
+[pageNotFoundExplanation]
+other = "La page que vous recherchez n'a pas été trouvée."
+
+[returnToHomepage]
+other = "S'il vous plaît, retournez à la page d'accueil."

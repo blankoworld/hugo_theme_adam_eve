@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "header.html" . }}
+</head>
+
+<body>
+  <main>
+    <div>
+      <h1 id="title">{{ i18n "pageNotFound" }}</h1>
+      <p>{{ i18n "pageNotFoundExplanation" }}<br />
+      <a href="{{ "" | relURL }}">{{ i18n "returnToHomepage" }}</a></p>
+    </div>
+  </main>
+</body>
+</html>

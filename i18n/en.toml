@@ -30,3 +30,12 @@ other = "all tags"
 
 [searchNoMatch]
 other = "No matches found"
+
+[pageNotFound]
+other = "Page not found!"
+
+[pageNotFoundExplanation]
+other = "The page you're looking for is missing."
+
+[returnToHomepage]
+other = "Please return to the homepage."
