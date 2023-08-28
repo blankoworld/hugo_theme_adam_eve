@@ -193,9 +193,9 @@ We have 4 sidebar models:
 Example:
 
 ```
-{{% note warning %}}
+{{< note warning >}}
 Pay attention to read this **entire page** before applying what you read!
-{{% /note %}}
+{{< /note >}}
 ```
 
 ### Homepage menu
