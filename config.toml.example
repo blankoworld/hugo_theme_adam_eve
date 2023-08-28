@@ -9,6 +9,9 @@ enableEmoji = true
     extended = true
     min = "0.105.0"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [Languages]
 [Languages.fr]
 languageCode = "fr"

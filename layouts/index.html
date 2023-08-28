@@ -6,9 +6,10 @@
 </head>
 
 <body>
-  {{ if isset .Site.Params "nohomebar" }}
-  <!-- No homepage menu bar -->
-  {{ else if .Site.Menus.main }}
+  <!-- Either nohomebar parameter is defined to false or is missing -->
+  {{ if and (isset .Site.Params "nohomebar") (eq $.Site.Params.nohomebar true) }}
+     <!-- so no homepage menu bar -->
+  {{ else }}
     {{ partial "menu.html" . }}
   {{ end }}
   <header style="text-align: center;">

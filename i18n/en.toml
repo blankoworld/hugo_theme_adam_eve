@@ -1,8 +1,29 @@
 [homepage]
 other = "Homepage"
 
+[searchmenu]
+other = "Search"
+
 [toc]
 other = "Table of contents"
 
 [last_modification]
 other = "Last modification: "
+
+[searchButton]
+other = "Search"
+
+[yourSearch]
+other = "Type your search here…"
+
+[tags]
+other = "Tags"
+
+[searchInstructions]
+other = "Please enter a word or phrase above, or see "
+
+[searchAllTags]
+other = "all tags"
+
+[searchNoMatch]
+other = "No matches found"

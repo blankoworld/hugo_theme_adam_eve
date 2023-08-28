@@ -1,8 +1,29 @@
 [homepage]
 other = "Accueil"
 
+[searchmenu]
+other = "Rechercher"
+
 [toc]
 other = "Table des matières"
 
 [last_modification]
 other = "Dernière modification : "
+
+[searchButton]
+other = "Rechercher"
+
+[yourSearch]
+other = "Tapez votre recherche ici…"
+
+[tags]
+other = "Étiquettes "
+
+[searchInstructions]
+other = "Entrez ci-dessus un mot, une phrase ou regardez"
+
+[searchAllTags]
+other = "parmi les tags"
+
+[searchNoMatch]
+other = "Aucun résultat trouvé"
