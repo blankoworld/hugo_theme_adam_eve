@@ -7,11 +7,8 @@
 
 <body>
   {{ partial "menu.html" . }}
-  <aside>
-    {{ partial "toc.html" . }}
-    <hr />
-  </aside>
   <main>
+    <h1>{{ i18n "searchTitle" }}</h1>
     <form action="{{ "search" | absURL }}">
 	    <input type="search" name="q" id="search-query" placeholder="{{ i18n "yourSearch" }}">
 	<button type="submit">{{ i18n "searchButton" }}</button>

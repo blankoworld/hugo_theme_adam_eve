@@ -10,6 +10,9 @@ other = "Table des matières"
 [last_modification]
 other = "Dernière modification : "
 
+[searchTitle]
+other = "Search"
+
 [searchButton]
 other = "Rechercher"
 
