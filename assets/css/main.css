@@ -142,21 +142,21 @@ body {
 }
 
 h2:before {
-  counter-increment: chapter;
-  content: counter(chapter) ". ";
+  counter-increment: section;
+  content: counter(section) ". ";
 }
 
 h1 {
-  counter-reset: chapter;
-}
-
-h2 {
   counter-reset: section;
 }
 
+h2 {
+  counter-reset: subsection;
+}
+
 h3:before {
-  counter-increment: section; 
-  content: counter(chapter) "." counter(section) " ";
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
 
 }
 
