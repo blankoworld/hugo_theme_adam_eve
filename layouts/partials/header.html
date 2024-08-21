@@ -4,3 +4,6 @@
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" title="default">
+  {{ if fileExists "static/favicon.ico" }}
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+  {{ end }}

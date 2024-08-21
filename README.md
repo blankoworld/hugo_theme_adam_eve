@@ -101,6 +101,9 @@ Check **exampleSite** directory content for some examples.
 ```
 [My category]({{< relref "mycategory/index.md" >}})
 ```
+### The favicon.ico file
+
+Just place your favicon.ico file in the `static` directory. It will be available in all pages.
 
 ## Special features
 
