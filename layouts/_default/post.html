@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{ partial "header.html" . }}
+</head>
+
+<body>
+  {{ partial "menu.html" . }}
+  <header style="text-align: center;">
+    <h1>{{ .Title }}</h1>
+  <hr />
+  </header>
+  <main>
+    {{ .Content }}
+    <ul>
+    {{ range .Pages }}
+        <li>{{ .Date | time.Format ":date_medium" }}, {{ .Date | time.Format ":time_short" }} - <a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+    </ul>
+  </main>
+  <footer>
+    <hr />
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>
