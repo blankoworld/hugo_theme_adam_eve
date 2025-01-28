@@ -14,7 +14,7 @@
   <main>
     {{ .Content }}
     <ul>
-    {{ range .Pages }}
+    {{ range sort .Pages "Date" "desc" }}
         <li>{{ .Date | time.Format ":date_medium" }}, {{ .Date | time.Format ":time_short" }} - <a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
     {{ end }}
     </ul>

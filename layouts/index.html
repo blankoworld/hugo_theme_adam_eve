@@ -24,8 +24,8 @@
   {{ else if ne (len $pages) 0 }}
     <h1>Posts</h1>
     <ul>
-    {{ range $pages.ByTitle }}
-    <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+    {{ range sort $pages.ByTitle "Date" "desc" }}
+    <li>{{ .Date | time.Format ":date_medium" }}, {{ .Date | time.Format ":time_short" }} - <a href="{{ .Permalink }}">{{ .Name }}</a></li>
     {{ end }}
     </ul>
   {{ end }}
