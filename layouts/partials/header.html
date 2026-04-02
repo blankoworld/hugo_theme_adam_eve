@@ -5,5 +5,14 @@
   {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.css" . | minify | fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" title="default">
   {{ if fileExists "static/favicon.ico" }}
-  <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+  {{ end }}
+  {{ if fileExists "static/favicon-32x32.png" }}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+  {{ end }}
+  {{ if fileExists "static/favicon-16x16.png" }}
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+  {{ end }}
+  {{ if fileExists "static/apple-touch-icon.png" }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
   {{ end }}
