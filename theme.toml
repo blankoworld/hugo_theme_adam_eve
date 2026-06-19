@@ -13,7 +13,7 @@ demosite = "https://olivier.dossmann.net/wiki"
 tags = ['minimal', 'wiki-like', 'documentation']
 features = ['wiki-like', 'responsive', 'minimal', 'shortcode', 'clean', 'boxes', 'i18n']
 
-min_version = "0.105.0"
+min_version = "0.158.0"
 
 [author]
   name = "Olivier DOSSMANN"

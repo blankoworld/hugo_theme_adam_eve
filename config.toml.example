@@ -14,11 +14,11 @@ enableEmoji = true
 
 [Languages]
 [Languages.fr]
-languageCode = "fr"
+locale = "fr"
 title = "Recueil d'astuces"
 
 [Languages.en]
-languageCode = "en"
+locale = "en"
 title = "Tip and tricks"
 
 [Languages.fr.params]

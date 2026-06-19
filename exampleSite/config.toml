@@ -12,11 +12,11 @@ disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 
 [Languages]
 [Languages.fr]
-languageCode = "fr"
+locale = "fr"
 title = "À propos d'aquarium"
 
 [Languages.en]
-languageCode = "en"
+locale = "en"
 title = "About aquarium"
 
 [Languages.fr.params]
