@@ -43,11 +43,11 @@ other = "Please return to the homepage."
 [toggleTheme]
 other = "Toggle theme"
 
-[switchToDark]
-other = "Switch to dark mode"
+[themeLight]
+other = "Light theme"
 
-[switchToLight]
-other = "Switch to light mode"
+[themeDark]
+other = "Dark theme"
 
-[switchToSystem]
-other = "Follow system settings"
+[themeSystem]
+other = "System theme"

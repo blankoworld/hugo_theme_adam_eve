@@ -265,6 +265,22 @@ h3:before {
 
 }
 
+/* Nav layout */
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav span.nav-links {
+  flex: 1;
+}
+
+nav hr {
+  width: 100%;
+  flex-basis: 100%;
+}
+
 /* Theme toggle button */
 button#theme-toggle {
   background: none;
@@ -272,8 +288,8 @@ button#theme-toggle {
   cursor: pointer;
   font-size: 1.1em;
   padding: 0.1em 0.3em;
-  vertical-align: middle;
   line-height: 1;
+  margin-left: auto;
 }
 
 /* For big displays/screens */

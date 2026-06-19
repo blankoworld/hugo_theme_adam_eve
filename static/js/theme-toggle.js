@@ -9,7 +9,11 @@
       document.documentElement.setAttribute('data-theme', theme);
     }
     var btn = document.getElementById('theme-toggle');
-    if (btn) btn.textContent = icons[theme];
+    if (btn) {
+      var icon = document.getElementById('theme-icon');
+      if (icon) icon.textContent = icons[theme];
+      btn.title = btn.getAttribute('data-title-' + theme) || btn.title;
+    }
   }
 
   window.cycleTheme = function () {

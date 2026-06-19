@@ -1,16 +1,22 @@
 <nav>
-  {{ if not .Page.IsHome }}
-  <a href="{{ .Site.BaseURL | absLangURL }}"><span class='homepage'>🏡</span>&nbsp;{{ i18n "homepage" }}</a>
-  {{ end }}
+  <span class="nav-links">
+    {{ if not .Page.IsHome }}
+    <a href="{{ .Site.BaseURL | absLangURL }}"><span class='homepage'>🏡</span>&nbsp;{{ i18n "homepage" }}</a>
+    {{ end }}
 
-  <!-- If withsearchbar is defined and is true, display Search menu -->
-  {{ if and (isset .Site.Params "withsearchbar") (eq $.Site.Params.withsearchbar true) }}
-  <a href="{{ "search" |absURL }}"><span class='searchmenu'>🔍</span>{{ i18n "searchmenu" }}</a>
-  {{ end }}
-  {{ $currentPage := . }}
-  {{ range .Site.Menus.main }}
-  <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL | absLangURL}}">{{ .Pre}} {{ .Name }}</a>
-  {{ end }}
-  <button id="theme-toggle" onclick="cycleTheme()" title="{{ i18n "toggleTheme" }}">☀️</button>
+    <!-- If withsearchbar is defined and is true, display Search menu -->
+    {{ if and (isset .Site.Params "withsearchbar") (eq $.Site.Params.withsearchbar true) }}
+    <a href="{{ "search" |absURL }}"><span class='searchmenu'>🔍</span>{{ i18n "searchmenu" }}</a>
+    {{ end }}
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL | absLangURL}}">{{ .Pre}} {{ .Name }}</a>
+    {{ end }}
+  </span>
+  <button id="theme-toggle" onclick="cycleTheme()"
+    title="{{ i18n "themeLight" }}"
+    data-title-light="{{ i18n "themeLight" }}"
+    data-title-dark="{{ i18n "themeDark" }}"
+    data-title-system="{{ i18n "themeSystem" }}"><span id="theme-icon">☀️</span></button>
   <hr />
 </nav>

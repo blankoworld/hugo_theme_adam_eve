@@ -43,11 +43,11 @@ other = "S'il vous plaît, retournez à la page d'accueil."
 [toggleTheme]
 other = "Changer le thème"
 
-[switchToDark]
-other = "Passer en mode nuit"
+[themeLight]
+other = "Thème clair"
 
-[switchToLight]
-other = "Passer en mode jour"
+[themeDark]
+other = "Thème nuit"
 
-[switchToSystem]
-other = "Suivre les préférences système"
+[themeSystem]
+other = "Thème système"
