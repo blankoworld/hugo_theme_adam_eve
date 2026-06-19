@@ -7,7 +7,13 @@ enableEmoji = true
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.105.0"
+    min = "0.158.0"
+
+[params]
+  # nohomebar = do not display a menu on homepage. If false: display it!
+  nohomebar = true
+  # showthemetoggle. If true, display an emoji to switch theme (dark/light/system).
+  showthemetoggle = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
