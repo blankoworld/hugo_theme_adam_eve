@@ -5,6 +5,10 @@ DefaultContentLanguage = "en"
 enableEmoji = true
 disableKinds = ["taxonomy", "term", "section"]
 
+[params]
+    nohomebar = true
+    showthemetoggle = true
+
 [module]
   [module.hugoVersion]
     extended = true

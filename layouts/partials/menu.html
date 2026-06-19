@@ -13,10 +13,5 @@
     <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL | absLangURL}}">{{ .Pre}} {{ .Name }}</a>
     {{ end }}
   </span>
-  <button id="theme-toggle" onclick="cycleTheme()"
-    title="{{ i18n "themeLight" }}"
-    data-title-light="{{ i18n "themeLight" }}"
-    data-title-dark="{{ i18n "themeDark" }}"
-    data-title-system="{{ i18n "themeSystem" }}"><span id="theme-icon">☀️</span></button>
   <hr />
 </nav>

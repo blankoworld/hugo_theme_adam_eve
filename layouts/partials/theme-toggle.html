@@ -1,0 +1,9 @@
+{{ if not (and (isset .Site.Params "showthemetoggle") (eq $.Site.Params.showthemetoggle false)) }}
+<div class="theme-toggle-wrapper">
+  <button id="theme-toggle" onclick="cycleTheme()"
+    title="{{ i18n "themeLight" }}"
+    data-title-light="{{ i18n "themeLight" }}"
+    data-title-dark="{{ i18n "themeDark" }}"
+    data-title-system="{{ i18n "themeSystem" }}"><span id="theme-icon">☀️</span></button>
+</div>
+{{ end }}

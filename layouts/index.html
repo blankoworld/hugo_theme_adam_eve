@@ -6,10 +6,9 @@
 </head>
 
 <body>
-  <!-- Either nohomebar parameter is defined to false or is missing -->
-  {{ if and (isset .Site.Params "nohomebar") (eq $.Site.Params.nohomebar true) }}
-     <!-- so no homepage menu bar -->
-  {{ else }}
+  {{ $showBar := not (and (isset .Site.Params "nohomebar") (eq $.Site.Params.nohomebar true)) }}
+  {{ partial "theme-toggle.html" . }}
+  {{ if $showBar }}
     {{ partial "menu.html" . }}
   {{ end }}
   <header style="text-align: center;">

@@ -282,6 +282,11 @@ nav hr {
 }
 
 /* Theme toggle button */
+.theme-toggle-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
 button#theme-toggle {
   background: none;
   border: none;
@@ -289,7 +294,6 @@ button#theme-toggle {
   font-size: 1.1em;
   padding: 0.1em 0.3em;
   line-height: 1;
-  margin-left: auto;
 }
 
 /* For big displays/screens */
