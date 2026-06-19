@@ -8,26 +8,26 @@ An **aquarium** (plural: aquariums or aquaria) is a vivarium of any size having 
 
 ![Some goldfish](/goldfish.jpg)
 
-{{% note important %}}
+{{< note important >}}
 Please, don't eat me! I'm a **cute** fish.
-{{% /note %}}
+{{< /note >}}
 
 # Design 
 
-{{% note tip %}}
+{{< note tip >}}
 Click on these links to see in what other pages are different.
-{{% /note %}}
+{{< /note >}}
 
   * [Materials]({{< relref "design/materials.md" >}})
   * [Styles]({{< relref "design/styles.md" >}})
 
 # Maintenance
 
-{{% note warning %}}
+{{< note warning >}}
 Next elements don't be links. But a list of page you planned to create later.
 
 By changing **nolink** keyword with **internal** one (in page source) it will change the CSS class. And so appearance will change.
-{{% /note %}}
+{{< /note >}}
 
   * {{< nolink "Water conditions" "maintenance/water.md" >}}
   * {{< nolink "Nitrogen cycle" "maintenance/nitrogen.md" >}}

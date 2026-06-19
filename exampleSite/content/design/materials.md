@@ -21,9 +21,9 @@ Large aquaria might instead use stronger materials such as fiberglass-reinforced
 
 Plywood can also be used when building aquaria. The benefits of using plywood include: lower construction costs, less weight, and better insulation. A popular positioning choice for plywood aquaria is keeping them in a wall. Here the use of plywood is hidden by sinking the aquarium inside the wall. Putting insulation between the two helps with the insulation of a heated tank.
 
-{{% note normal %}}
+{{< note normal >}}
 This drawing have been simplified to understand how it works. It may have difference in reality.
-{{% /note %}}
+{{< /note >}}
 
 ![Aquarium example](/aquarium.png)
 
