@@ -11,5 +11,6 @@
   {{ range .Site.Menus.main }}
   <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL | absLangURL}}">{{ .Pre}} {{ .Name }}</a>
   {{ end }}
+  <button id="theme-toggle" onclick="cycleTheme()" title="{{ i18n "toggleTheme" }}">☀️</button>
   <hr />
 </nav>

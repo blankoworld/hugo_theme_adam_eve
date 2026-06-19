@@ -1,12 +1,111 @@
+/* === Light mode variables (default) === */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-link: #2b73b7;
+  --color-h1: #e52c5a;
+  --color-site-title: #000000;
+  --color-blockquote-border: #e5e5e5;
+  --color-blockquote-bg: #f9f9f9;
+  --color-pre-bg: #f9f9f9;
+  --color-pre-border: #cccccc;
+  --color-table-th-bg: #000000;
+  --color-table-th-text: #ffffff;
+  --color-table-row-odd: #eeeeee;
+  --color-img-border: #eeeeee;
+  --color-img-shadow: #999999;
+  --color-warning-bg: #fdd;
+  --color-important-bg: #ffc;
+  --color-tip-bg: #dfd;
+  --color-normal-bg: #eef;
+  --color-main-link: #008800;
+  --color-nolink: red;
+}
+
+/* === Dark mode variables === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1e1e2e;
+    --color-text: #cdd6f4;
+    --color-link: #89b4fa;
+    --color-h1: #f38ba8;
+    --color-site-title: #cdd6f4;
+    --color-blockquote-border: #45475a;
+    --color-blockquote-bg: #313244;
+    --color-pre-bg: #313244;
+    --color-pre-border: #585b70;
+    --color-table-th-bg: #313244;
+    --color-table-th-text: #cdd6f4;
+    --color-table-row-odd: #28283d;
+    --color-img-border: #45475a;
+    --color-img-shadow: #11111b;
+    --color-warning-bg: #5c2222;
+    --color-important-bg: #4d4400;
+    --color-tip-bg: #1e4a28;
+    --color-normal-bg: #1e2a60;
+    --color-main-link: #a6e3a1;
+    --color-nolink: #ff8a8a;
+  }
+}
+
+/* === Dark mode: manual override === */
+html[data-theme="dark"] {
+  --color-bg: #1e1e2e;
+  --color-text: #cdd6f4;
+  --color-link: #89b4fa;
+  --color-h1: #f38ba8;
+  --color-site-title: #cdd6f4;
+  --color-blockquote-border: #45475a;
+  --color-blockquote-bg: #313244;
+  --color-pre-bg: #313244;
+  --color-pre-border: #585b70;
+  --color-table-th-bg: #313244;
+  --color-table-th-text: #cdd6f4;
+  --color-table-row-odd: #28283d;
+  --color-img-border: #45475a;
+  --color-img-shadow: #11111b;
+  --color-warning-bg: #5c2222;
+  --color-important-bg: #4d4400;
+  --color-tip-bg: #1e4a28;
+  --color-normal-bg: #1e2a60;
+  --color-main-link: #a6e3a1;
+  --color-nolink: #ff8a8a;
+}
+
+/* === Light mode: manual override === */
+html[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-link: #2b73b7;
+  --color-h1: #e52c5a;
+  --color-site-title: #000000;
+  --color-blockquote-border: #e5e5e5;
+  --color-blockquote-bg: #f9f9f9;
+  --color-pre-bg: #f9f9f9;
+  --color-pre-border: #cccccc;
+  --color-table-th-bg: #000000;
+  --color-table-th-text: #ffffff;
+  --color-table-row-odd: #eeeeee;
+  --color-img-border: #eeeeee;
+  --color-img-shadow: #999999;
+  --color-warning-bg: #fdd;
+  --color-important-bg: #ffc;
+  --color-tip-bg: #dfd;
+  --color-normal-bg: #eef;
+  --color-main-link: #008800;
+  --color-nolink: red;
+}
+
+
 /* Common pages colors/display */
 a:active, a:link, a:visited, a:hover {
-  color: #2b73b7;
+  color: var(--color-link);
   text-decoration: none;
 }
 
 h1 {
   text-align: left;
-  color: #e52c5a;
+  color: var(--color-h1);
 }
 
 h2 {
@@ -19,7 +118,7 @@ h3, h4, h5, h6 {
 
 h1#site_title {
   text-align: center;
-  color: black;
+  color: var(--color-site-title);
 }
 
 h6 {
@@ -27,13 +126,13 @@ h6 {
 }
 
 main a:active, main a:link, main a:visited, main a:hover {
- color: #080; // comment this line if you planned to use 'internal' shortcode
+ color: var(--color-main-link); // comment this line if you planned to use 'internal' shortcode
 }
 
 blockquote {
   padding: 0.5rem 1rem;
-  border-left: 0.3rem solid #e5e5e5;
-  background-color: #f9f9f9;
+  border-left: 0.3rem solid var(--color-blockquote-border);
+  background-color: var(--color-blockquote-bg);
 }
 
 pre {
@@ -46,8 +145,8 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
-  border: thin solid #ccc;
+  background-color: var(--color-pre-bg);
+  border: thin solid var(--color-pre-border);
 }
 
 table {
@@ -56,20 +155,20 @@ table {
 }
 
 table th {
-  background: black;
-  color: white;
+  background: var(--color-table-th-bg);
+  color: var(--color-table-th-text);
   text-align: center;
 }
 
 table tr:nth-child(odd) {
-  background: #eeeeee;
+  background: var(--color-table-row-odd);
 }
 
 p img {
   display: block;
   margin: 10px auto;
-  border: 1px solid #eee;
-  box-shadow: 0 0 .5em #999;
+  border: 1px solid var(--color-img-border);
+  box-shadow: 0 0 .5em var(--color-img-shadow);
 }
 
 .chromoji {
@@ -79,7 +178,7 @@ p img {
 
 /* Shortcode 'nolink' */
 span.nolink {
-  color: red;
+  color: var(--color-nolink);
 /*  border-bottom: 1px dashed;*/
 }
 
@@ -91,13 +190,13 @@ a.remote:active, a.remote:link, a.remote:visited, a.remote:hover {
   background-position: 0 center;
   padding: 0 0 0 18px;
   word-wrap: break-word;
-  color: #2b73b7;
+  color: var(--color-link);
 }
 
 
 /* Shortcode 'internal' */
 a.internal:active, a.internal:link, a.internal:visited, a.internal:hover {
-  color: #080;
+  color: var(--color-main-link);
   text-decoration: none;
 }
 
@@ -120,22 +219,22 @@ div.note {
 }
 
 div.warning {
-  background-color: #fdd;
+  background-color: var(--color-warning-bg);
   background-image: url({{ printf "%s%s" .Site.BaseURL "/img/warning.png" | absURL }});
 }
 
 div.important {
-  background-color: #ffc;
+  background-color: var(--color-important-bg);
   background-image: url({{ printf "%s%s" .Site.BaseURL "/img/important.png" | absURL }});
 }
 
 div.tip {
-  background-color: #dfd;
+  background-color: var(--color-tip-bg);
   background-image: url({{ printf "%s%s" .Site.BaseURL "/img/tip.png" | absURL }});
 }
 
 div.normal {
-  background-color: #eef;
+  background-color: var(--color-normal-bg);
   background-image: url({{ printf "%s%s" .Site.BaseURL "/img/note.png" | absURL }});
 }
 
@@ -143,6 +242,8 @@ div.normal {
 body {
   counter-reset: chapter;
   font-size: 16pt;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 h2:before {
@@ -162,6 +263,17 @@ h3:before {
   counter-increment: subsection;
   content: counter(section) "." counter(subsection) " ";
 
+}
+
+/* Theme toggle button */
+button#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  padding: 0.1em 0.3em;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 /* For big displays/screens */

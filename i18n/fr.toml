@@ -39,3 +39,15 @@ other = "La page que vous recherchez n'a pas été trouvée."
 
 [returnToHomepage]
 other = "S'il vous plaît, retournez à la page d'accueil."
+
+[toggleTheme]
+other = "Changer le thème"
+
+[switchToDark]
+other = "Passer en mode nuit"
+
+[switchToLight]
+other = "Passer en mode jour"
+
+[switchToSystem]
+other = "Suivre les préférences système"

@@ -39,3 +39,15 @@ other = "The page you're looking for is missing."
 
 [returnToHomepage]
 other = "Please return to the homepage."
+
+[toggleTheme]
+other = "Toggle theme"
+
+[switchToDark]
+other = "Switch to dark mode"
+
+[switchToLight]
+other = "Switch to light mode"
+
+[switchToSystem]
+other = "Follow system settings"

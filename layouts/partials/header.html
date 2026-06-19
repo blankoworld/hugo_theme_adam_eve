@@ -16,3 +16,7 @@
   {{ if fileExists "static/apple-touch-icon.png" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
   {{ end }}
+  <script>/* Apply saved theme before first paint to avoid flash */
+  (function(){var t=localStorage.getItem('theme')||'light';if(t!=='system')document.documentElement.setAttribute('data-theme',t);})();
+  </script>
+  <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
