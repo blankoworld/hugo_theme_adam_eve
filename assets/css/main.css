@@ -135,6 +135,16 @@ blockquote {
   background-color: var(--color-blockquote-bg);
 }
 
+code {
+  font-family: "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+  font-size: 0.9em;
+  color: var(--color-text);
+  background-color: var(--color-pre-bg);
+  border: thin solid var(--color-pre-border);
+  border-radius: 3px;
+  padding: 0.15em 0.4em;
+}
+
 pre {
   display: block;
   margin-top: 0;
@@ -147,6 +157,13 @@ pre {
   word-wrap: break-word;
   background-color: var(--color-pre-bg);
   border: thin solid var(--color-pre-border);
+}
+
+pre code {
+  font-size: 1em;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 table {
