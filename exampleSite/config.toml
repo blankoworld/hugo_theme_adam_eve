@@ -30,6 +30,9 @@ description = "Des poissons et de l'eau"
 description = "Fish and water"
 
 [markup]
+  [markup.highlight]
+    noClasses = false
+    style = "manni"
   [markup.tableOfContents]
     endLevel = 6
     ordered = false

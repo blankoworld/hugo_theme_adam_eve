@@ -21,3 +21,11 @@ There are several types of kreisel tanks. In a true kreisel, a circular tank has
 Another popular setup is the biotope aquarium. A biotope aquarium is a recreation of a specific natural environment. Some of the most popular biotopes are the freshwater habitats of the Amazon and Rio Negro rivers, the African rift lake environments of Lake Malawi and Lake Tanganyika, and saltwater coral reefs of Australia, the Red Sea, and the Caribbean. The fish, plants, substrate, rocks, wood, coral, and any other component of the display should completely match that of the local natural environment. It can be a challenge to recreate such environments, and most "true" biotopes will only have a few (if not only one) species of fish and invertebrates.
 
 Finally, an emerging concept for the home is that of a wall mounted aquarium, some of which are displayed at the Living Art Marine Center.
+
+## Code
+
+Inline code, like `fish.isHappy()`, and fenced code blocks both adapt to the day/night theme toggle:
+
+```bash
+echo "Please, don't eat me! I'm a cute fish."
+```

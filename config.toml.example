@@ -34,6 +34,9 @@ description = "Wiki de partage de connaissances"
 description = "Sharing knowledge wiki"
 
 [markup]
+  [markup.highlight]
+    noClasses = false
+    style = "manni"
   [markup.tableOfContents]
     endLevel = 6
     ordered = false

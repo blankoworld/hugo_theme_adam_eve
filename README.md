@@ -76,10 +76,24 @@ This will enable this explained option.
 
 ### Choose code colorization theme
 
-Regarding [list of available themes for Chroma plugin](https://xyproto.github.io/splash/docs/), you can customize your preferred code colorization theme using this line in your `config.toml` file:
+Since this theme supports a day/night mode (the `showthemetoggle` parameter, see `config.toml.example`), syntax highlighting needs to use CSS classes instead of inline colors, so it can adapt itself when the reader switches mode. This means the old `pygmentsstyle = 'monokai'` top-level setting (which bakes a single, fixed-color palette directly into each page's HTML) is no longer used by this theme and should be removed from your `config.toml` if you still have it.
+
+Instead, enable classes-based highlighting in your `config.toml`:
 
 ```toml
-pygmentsstyle = 'monokai'
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = "manni"
+```
+
+`assets/css/main.css` already ships with two matching color palettes for `<pre>`/`<code>` blocks: **manni** (light mode) and **catppuccin-mocha** (dark mode, same palette as the rest of the dark theme), switched automatically with the existing `html[data-theme]` / `prefers-color-scheme` mechanism. The `style` value above only documents which palette was used to generate the light-mode CSS; it has no effect by itself once `noClasses = false` is set, since colors now come from the stylesheet, not from Hugo/Chroma.
+
+If you want to use different color themes (regarding the [list of available themes for Chroma plugin](https://xyproto.github.io/splash/docs/)), regenerate both palettes and merge them into `assets/css/main.css`, scoping the dark one under `html[data-theme="dark"]` and `@media (prefers-color-scheme: dark)` (guarded with `html:not([data-theme="light"])` so an explicit light choice still wins):
+
+```bash
+hugo gen chromastyles --style=manni > light.css
+hugo gen chromastyles --style=catppuccin-mocha > dark.css
 ```
 
 ## Getting Started
