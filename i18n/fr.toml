@@ -51,3 +51,6 @@ other = "Thème nuit"
 
 [themeSystem]
 other = "Thème système"
+
+[rss]
+other = "Flux RSS"

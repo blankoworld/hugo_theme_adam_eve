@@ -51,3 +51,6 @@ other = "Dark theme"
 
 [themeSystem]
 other = "System theme"
+
+[rss]
+other = "RSS feed"

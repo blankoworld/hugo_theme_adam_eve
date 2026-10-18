@@ -315,6 +315,20 @@ button#theme-toggle {
   line-height: 1;
 }
 
+/* Footer row: last modification date on the left, RSS link on the right */
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rss-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
 /* For big displays/screens */
 @media (min-width: 960px) {
   html, body {

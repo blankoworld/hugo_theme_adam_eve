@@ -1,1 +1,9 @@
-<p>{{ i18n "last_modification" }}{{ .Lastmod.Format "2006-01-02 at 15:04" }}</p>
+<div class="footer-row">
+  <p>{{ i18n "last_modification" }}{{ .Lastmod.Format "2006-01-02 at 15:04" }}</p>
+  {{ with .Site.Home.OutputFormats.Get "rss" }}
+  <p class="rss-link"><a href="{{ .Permalink }}" title="{{ i18n "rss" }}" type="{{ .MediaType.Type }}">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><circle cx="5" cy="19" r="2.2"/><path d="M4 11.5a8.5 8.5 0 0 1 8.5 8.5h2.2A10.7 10.7 0 0 0 4 9.3z"/><path d="M4 4.8A15.2 15.2 0 0 1 19.2 20h2.2A17.4 17.4 0 0 0 4 2.6z"/></svg>
+    {{ i18n "rss" }}
+  </a></p>
+  {{ end }}
+</div>

@@ -215,6 +215,12 @@ Pay attention to read this **entire page** before applying what you read!
 {{< /note >}}
 ```
 
+### RSS feed
+
+Hugo generates an RSS feed by default (at `index.xml`), even if nothing links to it. This theme advertises it automatically: a `<link rel="alternate">` tag is added to the `<head>` of every page so browsers and feed readers can discover it, and a small RSS icon with a link to the feed is shown in the footer, next to the last modification date.
+
+Nothing to configure: it works out of the box. If you disable RSS output in your `config.toml` (via `disableKinds` or `[outputs]`), both the `<head>` tag and the footer link disappear automatically.
+
 ### Homepage menu
 
 By default a menu is displayed on Homepage. You can disable it. Use `nohomebar` in **config.toml** like this:

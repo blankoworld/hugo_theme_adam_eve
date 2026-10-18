@@ -16,6 +16,9 @@
   {{ if fileExists "static/apple-touch-icon.png" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
   {{ end }}
+  {{ range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type | safeHTMLAttr }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+  {{ end }}
   <script>/* Apply saved theme before first paint to avoid flash */
   (function(){var t=localStorage.getItem('theme')||'light';if(t!=='system')document.documentElement.setAttribute('data-theme',t);})();
   </script>
